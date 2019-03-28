@@ -1,15 +1,14 @@
 
-<p align="center"><img width="100" src="https://cmsoftware.github.io/imgs/logo.png" alt="cm logo"></p>
+<p align="center"><img src="./imgs/logo.png" alt="logo"></p>
 
-<p align="center"><img src="https://img.shields.io/badge/node-10.13.0-brightgreen.svg" alt='node'> <img src="https://img.shields.io/badge/npm-6.4.1-brightgreen.svg" alt='npm'> <img src="https://img.shields.io/badge/hexo--cli-1.1.0-blue.svg" alt='hexo'></p>
+<p align="center"><a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-10.13.0-brightgreen.svg" alt="node"></a> <a href=""><img src="https://img.shields.io/badge/npm-6.4.1-brightgreen.svg" alt="npm"></a> <img src="https://img.shields.io/badge/hexo--cli-1.1.0-blue.svg" alt="hexo"></p>
 
 <h2 align="center">cm blog</h2>
 
 <p align="center">基于 <a href="https://hexo.io/">Hexo</a> 搭建，使用 <a href="https://github.com/miccall/hexo-theme-Mic_Theme">miccall</a> 主题</p>
 
 
-# How to use
-
+## How to use
 
 1. 首先你需要掌握：
    
@@ -32,7 +31,7 @@
 8. 当下一次使用的时候就可以直接跳到第四步开始了（注意，如果 hexo 分支在其他设备更新过，在操作前需要先 git pull 一下）
 
 
-# Build up
+## Build up
 
 **a**. 首先你需要掌握：
 
@@ -46,13 +45,14 @@
 **b**. 现在你已经掌握上述技能，开始搭建发布环境：
 
   0. 本地环境参考：
+
     - Node.js - v10.13.0 ( >= 8.x )
     - npm - v6.4.1 ( >= 6.x )
     - hexo-cli - v1.1.0
 
   1. 首先 clone 当前仓库，切换到 hexo 分支 ( ```git checkout hexo``` )，并执行 ```cnpm install```
 
-  2. 此时获取主题 ( 已经将 repo 添加为 submodule 不需要自己手动复制了:) )
+  2. 此时获取主题 ( 已经将 theme repo 添加为 submodule 不需要自己手动复制了:) )
   ```
   # 通过子模块更新主题
   git submodule update
@@ -62,7 +62,7 @@
 
   4. OK
 
-**c**. 启动
+**c**. 启动！
 
 ```
 # 清理缓存可用
@@ -76,11 +76,14 @@ hexo g
 
 # hexo d 等同于 hexo deploy
 hexo d
+
+# hexo g -d 等同于 hexo g + hexo d
+hexo g -d
 ```
 
 
 
-# Base
+## Base
 
 - 每篇文章的基本配置如下：
 ```
@@ -98,6 +101,6 @@ thumbnail: https://xxxxxxxxxx.png # 略缩图
 ```
 
 
-# Author
+## Author
 
 背锅人 @vzt7 - [vvzt666666@foxmail.com](mailto://vvzt666666@foxmail.com)

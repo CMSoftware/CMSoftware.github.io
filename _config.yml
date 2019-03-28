@@ -26,7 +26,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -84,6 +84,8 @@ deploy:
   # message: [message]
   name: WangZhentong
   # email: 
-  extend_dirs: create_the_light
+  extend_dirs: 
+    - create_the_light
+    - imgs
   ignore_hidden: false # default is true
   # ignore_pattern: regexp  # whatever file that matches the regexp will be ignored when deploying
