@@ -1,7 +1,7 @@
 
 <p align="center"><img src="./imgs/logo.png" alt="logo"></p>
 
-<p align="center"><a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-10.13.0-brightgreen.svg" alt="node"></a> <a href=""><img src="https://img.shields.io/badge/npm-6.4.1-brightgreen.svg" alt="npm"></a> <img src="https://img.shields.io/badge/hexo--cli-1.1.0-blue.svg" alt="hexo"></p>
+<p align="center"><a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-10.13.0-brightgreen.svg" alt="node"></a> <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-6.4.1-brightgreen.svg" alt="npm"></a> <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo--cli-1.1.0-blue.svg" alt="hexo"></a></p>
 
 <h2 align="center">cm blog</h2>
 
