@@ -4,9 +4,9 @@
 
 # Head info
 head:
-    favicon: "/img/logo_miccall.png"
+    favicon: "/imgs/fav.png"
     keywords: chuangming, 创明, 创明工作室, 创明实验室, 创明软件工作室, 前端
-    backgroundpic : "img/bg.jpg"
+    backgroundpic : "imgs/bg.jpg"
 
 Intro:
     name: CMING
@@ -23,8 +23,7 @@ Nav:
     #Social
     # for more icons, please see http://fontawesome.io/icons/#brand
     icon:
-        github: https://github.com/miccall
-        500px: http://500px.com
+        github: https://github.com/CMSoftware
         
     pages:
         关于: 
