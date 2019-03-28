@@ -1,30 +1,35 @@
-# CM BLOG
 
-基于 Hexo 搭建，使用 [skapp](https://github.com/Mrminfive/hexo-theme-skapp) 主题。
+<p align="center"><img width="100" src="https://cmsoftware.github.io/imgs/logo.png" alt="cm logo"></p>
+
+<p align="center"><img src="https://img.shields.io/badge/node-10.13.0-brightgreen.svg" alt='node'> <img src="https://img.shields.io/badge/npm-6.4.1-brightgreen.svg" alt='npm'> <img src="https://img.shields.io/badge/hexo--cli-1.1.0-blue.svg" alt='hexo'></p>
+
+<h2 align="center">cm blog</h2>
+
+<p align="center">基于 <a href="https://hexo.io/">Hexo</a> 搭建，使用 <a href="https://github.com/miccall/hexo-theme-Mic_Theme">miccall</a> 主题</p>
 
 
 # How to use
 
 
-0. 首先你需要掌握：
+1. 首先你需要掌握：
    
    - Git 基础
    - npm 的使用
   
    
-1. 项目分为两个分支，master 为博客主分支，hexo 为存放项目的分支
+2. 项目分为两个分支，master 为博客主分支，hexo 为存放项目的分支
 
-2. 首先 clone 整个项目到本地，并切到 hexo 分支
+3. 首先 clone 整个项目到本地，并切到 hexo 分支
 
-3. 参照 [Build up](#build-up) 部分完成构建
+4. 参照 [Build up](#build-up) 部分完成构建
 
-4. 现在你可以进行你对博客的操作，比如增删改查
+5. 现在你可以进行你对博客的操作，比如增删改查
 
-5. 修改完毕之后，且 hexo s -l 本地检查无误后，即可 hexo g -d 进行更新 master 分支，即发布博客（**不能手动 push 到 master 分支**）
+6. 修改完毕之后，且 hexo s -l 本地检查无误后，即可 hexo g -d 进行更新 master 分支，即发布博客（**不能手动 push 到 master 分支**）
 
-6. 然后可以使用 git 将本地的项目更新到 hexo 分支（hexo 分支即为保存项目的分支，不一定需要每次都更新，但是如果需要在另一设备管理博客，则在这之前就需要将最新的项目给 push 到 hexo 分支）
+7. 然后可以使用 git 将本地的项目更新到 hexo 分支（hexo 分支即为保存项目的分支，不一定需要每次都更新，但是如果需要在另一设备管理博客，则在这之前就需要将最新的项目给 push 到 hexo 分支）
 
-7. 当下一次使用的时候就可以直接跳到第四步开始了（注意，如果 hexo 分支在其他设备更新过，在操作前需要先 git pull 一下）
+8. 当下一次使用的时候就可以直接跳到第四步开始了（注意，如果 hexo 分支在其他设备更新过，在操作前需要先 git pull 一下）
 
 
 # Build up
@@ -35,62 +40,41 @@
   - Hexo 主题相关
   - Markdown 语法基础
   - 基本的搜索能力
-  - 附：[Hexo 官网](https://hexo.io/zh-cn/)、[此项目用到的 skapp 主题](https://github.com/Mrminfive/hexo-theme-skapp)                       
+  - 附：[Hexo 官网](https://hexo.io/zh-cn/)、[此项目用到的 miccall 主题](https://github.com/miccall/hexo-theme-Mic_Theme)
 
 
-**b**. 现在你已经掌握上述技能，开始安装必要依赖：
+**b**. 现在你已经掌握上述技能，开始搭建发布环境：
 
-  1. 由于使用 [nodejieba](https://github.com/yanyiwu/nodejieba) 分词库，所以 windows 下用户应提前安装好相应编译环境，即两个全局依赖：
+  0. 本地环境参考：
+    - Node.js - v10.13.0 ( >= 8.x )
+    - npm - v6.4.1 ( >= 6.x )
+    - hexo-cli - v1.1.0
+
+  1. 首先 clone 当前仓库，切换到 hexo 分支 ( ```git checkout hexo``` )，并执行 ```cnpm install```
+
+  2. 此时获取主题 ( 已经将 repo 添加为 submodule 不需要自己手动复制了:) )
   ```
-  # 这里 Windows 下建议使用管理员身份打开命令行执行，可用 Win+X 打开
-  # 安装太慢可用 cnpm ，后面同理
-  npm install -g windows-build-tools
-  npm install -g node-gyp
-  ```
-
-  1. 再装一堆项目依赖
-  ```
-  # 切到项目目录下（要保证处于 hexo 最新分支）执行：
-  npm install --save hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed hexo-generator-sitemap hexo-renderer-sass hexo-renderer-swig mamboer/lunr.js moment node-sass object-assign
-  # 注意，安装 mamboer/lunr.js 可能会报错
+  # 通过子模块更新主题
+  git submodule update
   ```
 
-  2. Warning：
-  
-    安装过程中可能会碰到一些问题，可自行解决
+  3. 将 ```_config_theme.yml``` 中的内容 `复制并覆盖` 到 ```./themes/hexo-theme-Mic_Theme/_config.yml```  ( 修改主题里的 config 文件后也要记得同步根目录下的 config )
 
-    附 issue：https://github.com/Mrminfive/hexo-theme-skapp/issues
+  4. OK
 
-    如果安装顺利，那你是真的流啤
-
-
-**c**. 下载主题
-
-  0. 因为之前已经配置好了，只需要把主题 clone 到 ./themes 里即可
-
-  ```
-  # 把主题 clone 到 ./themes 文件夹里
-  cd themes && git clone https://github.com/Mrminfive/hexo-theme-skapp.git
-  ```
-
-
-**d**. 启动
-
-  0. 确认你已经 npm install 过就可以跑起来了
-
-  1. 如下：
+**c**. 启动
 
 ```
 # 清理缓存可用
 hexo clean
 
-# 跑在本地，如果这个项目有报错404，可加上 -l
+# 在本地启动
 hexo s
 
-# 等同于 hexo generate
+# hexo g 等同于 hexo generate
 hexo g
 
-# 等同于 hexo deploy
+# hexo d 等同于 hexo deploy
 hexo d
 ```
 
@@ -100,36 +84,20 @@ hexo d
 
 - 每篇文章的基本配置如下：
 ```
-title: Hello World 
-cover: http://oxnuwmm3w.bkt.clouddn.com/hello-world.jpeg
-# 作者信息，多作者则设置为数组
-# 单作者
-author: 
-  nick: BruceYJ
-  link: https://www.github.com/BruceYuj
-# 多作者
-author:
-  - nick: BruceYJ
-    link: https://www.github.com/BruceYuj
-  - nick: minfive
-    link: https://www.github.com/Mrminfive
+---
+title: # 文章标题  
+date: 2019-3-28 19:22:28  # 文章发表时间
+tags:
+- 标签1
+- 标签2 (可选)
+categories: Algorithm # 分类
+thumbnail: https://xxxxxxxxxx.png # 略缩图
+---
 
-# 如果文章为转载文章，需要多加文章出处项
-editor:
-  name: Minfive
-  link: https://www.github.com/Mrminfive
-
-# 首页每篇文章的子标题
-subtitle: your subtitle
+文章正文
 ```
 
 
 # Author
 
 背锅人 @vzt7 - [vvzt666666@foxmail.com](mailto://vvzt666666@foxmail.com)
-
-
-# Link
-
-- 更多主题相关：https://github.com/Mrminfive/hexo-theme-skapp
-
