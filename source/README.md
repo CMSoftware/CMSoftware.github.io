@@ -55,7 +55,7 @@
   2. 此时获取主题 ( 已经将 theme repo 添加为 submodule 不需要自己手动复制了:) )
   ```
   # 通过子模块更新主题
-  git submodule update
+  git submodule update --init --recursive
   ```
 
   3. 将 ```_config_theme.yml``` 中的内容 `复制并覆盖` 到 ```./themes/hexo-theme-Mic_Theme/_config.yml```  ( 修改主题里的 config 文件后也要记得同步根目录下的 config )
