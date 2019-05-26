@@ -4,7 +4,7 @@
 
 # Head info
 head:
-    favicon: "/imgs/fav.png"
+    favicon: "/imgs/logo.png"
     keywords: chuangming, 创明, 创明工作室, 创明实验室, 创明软件工作室, 前端
     backgroundpic : "imgs/bg.jpg"
 
