@@ -32,7 +32,7 @@ Nav:
             link: "/group/"
         # 图库:
         #     link: "/gallery/"
-        标签:
+        活动:
             link: "/tag/"
         #自定义标签名
         #   link：“路径”
