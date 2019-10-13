@@ -79,8 +79,10 @@ hexo d
 
 # hexo g -d 等同于 hexo g + hexo d
 hexo g -d
-```
+
 # 同时还有其它人在改的时候，一段时间记得git push,更新到最新分支
+```
+
 
 
 ## Base
