@@ -50,7 +50,7 @@
     - npm - v6.4.1 ( >= 6.x )
     - hexo-cli - v1.1.0
 
-  1. 首先 clone 当前仓库，切换到 hexo 分支 ( ```git checkout hexo``` )，并执行 ```cnpm install```
+  1. 首先 clone 当前仓库，切换到 hexo 分支 ( ```git checkout hexo``` )，然后下载cnpm淘宝镜像 ```npm install -g cnpm --registry=https://registry.npm.taobao.org``` 安装过可以不管，然后执行 ```cnpm install```
 
   2. 此时获取主题 ( 已经将 theme repo 添加为 submodule 不需要自己手动复制了:) )
   ```
@@ -58,7 +58,7 @@
   git submodule update --init --recursive
   ```
 
-  3. 将 ```_config_theme.yml``` 中的内容 `复制并覆盖` 到 ```./themes/hexo-theme-Mic_Theme/_config.yml```  ( 修改主题里的 config 文件后也要记得同步根目录下的 config )
+  3. 将 ```_config_theme.yml``` 中的内容 `复制并覆盖` 到 ```./themes/hexo-theme-Mic_Theme/_config.yml```  ( 修改主题里的 config 文件后也要记得同步根目录下的 config )//这里学长学姐们弄好了，可以忽视。
 
   4. OK
 
@@ -80,7 +80,7 @@ hexo d
 # hexo g -d 等同于 hexo g + hexo d
 hexo g -d
 ```
-
+# 同时还有其它人在改的时候，一段时间记得git push,更新到最新分支
 
 
 ## Base
